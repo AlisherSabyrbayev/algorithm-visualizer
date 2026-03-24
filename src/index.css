@@ -1,0 +1,79 @@
+:root {
+  --bg-primary: #ffffff; /* Clean white */
+  --bg-secondary: #fafafa; /* Very light gray */
+  --bg-surface: #eaeaea; /* Light border color */
+  
+  --text-primary: #111827; /* Dark charcoal */
+  --text-secondary: #6b7280; /* Subtle gray */
+  
+  --accent-primary: #111827; /* Dark black/gray for primary buttons */
+  --accent-hover: #374151; /* Lighter black for hover */
+  --accent-disabled: #e5e7eb; /* Disabled background */
+  
+  /* Sorting Colors - Muted/Soft */
+  --bar-default: #d1d5db; /* Gray 300 */
+  --bar-comparing: #60a5fa; /* Soft Blue */
+  --bar-swapping: #f87171; /* Soft Red */
+  --bar-sorted: #34d399; /* Soft Mint Green */
+
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --transition-speed: 0.2s;
+  
+  font-family: var(--font-body);
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all var(--transition-speed) ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Custom Scrollbar - minimal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary); 
+}
