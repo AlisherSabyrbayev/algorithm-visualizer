@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './Visualizer.css';
-import Controls from '../Controls/Controls';
-import { executeAnimations, clearAllTimeouts } from '../../utils/animationEngine';
-import { getBubbleSortAnimations } from '../../algorithms/bubbleSort';
-import { getMergeSortAnimations } from '../../algorithms/mergeSort';
-import { getQuickSortAnimations } from '../../algorithms/quickSort';
-import { getInsertionSortAnimations } from '../../algorithms/insertionSort';
+import Controls from './Controls';
+import { executeAnimations, clearAllTimeouts } from '../utils';
+import { 
+  getBubbleSortAnimations, 
+  getMergeSortAnimations, 
+  getQuickSortAnimations, 
+  getInsertionSortAnimations 
+} from '../sortingAlgorithms';
 
 const Visualizer = () => {
   const [array, setArray] = useState([]);
   const [isSorting, setIsSorting] = useState(false);
   const [arraySize, setArraySize] = useState(50);
-  const [sortingSpeed, setSortingSpeed] = useState(10); // ms per step
+  const [sortingSpeed, setSortingSpeed] = useState(10);
 
   useEffect(() => {
     generateNewArray();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [arraySize]);
 
   const generateNewArray = () => {
@@ -25,19 +26,15 @@ const Visualizer = () => {
     }
     const newArray = [];
     for (let i = 0; i < arraySize; i++) {
-      newArray.push(randomIntFromInterval(5, 500));
+      newArray.push(Math.floor(Math.random() * 496) + 5);
     }
     setArray(newArray);
-    // Reset colors of the array bars if previously sorted
+    
     const arrayBars = document.getElementsByClassName('array-bar');
     for (let i = 0; i < arrayBars.length; i++) {
         const bar = arrayBars[i];
         if (bar) bar.style.backgroundColor = 'var(--bar-default)';
     }
-  };
-
-  const randomIntFromInterval = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
   const handleSort = (sortFunction) => {

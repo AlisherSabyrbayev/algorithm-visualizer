@@ -1,20 +1,19 @@
 :root {
-  --bg-primary: #ffffff; /* Clean white */
-  --bg-secondary: #fafafa; /* Very light gray */
-  --bg-surface: #eaeaea; /* Light border color */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-surface: #eaeaea;
   
-  --text-primary: #111827; /* Dark charcoal */
-  --text-secondary: #6b7280; /* Subtle gray */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
   
-  --accent-primary: #111827; /* Dark black/gray for primary buttons */
-  --accent-hover: #374151; /* Lighter black for hover */
-  --accent-disabled: #e5e7eb; /* Disabled background */
+  --accent-primary: #111827;
+  --accent-hover: #374151;
+  --accent-disabled: #e5e7eb;
   
-  /* Sorting Colors - Muted/Soft */
-  --bar-default: #d1d5db; /* Gray 300 */
-  --bar-comparing: #60a5fa; /* Soft Blue */
-  --bar-swapping: #f87171; /* Soft Red */
-  --bar-sorted: #34d399; /* Soft Mint Green */
+  --bar-default: #d1d5db;
+  --bar-comparing: #60a5fa;
+  --bar-swapping: #f87171;
+  --bar-sorted: #34d399;
 
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --transition-speed: 0.2s;
@@ -62,7 +61,6 @@ button:disabled {
   opacity: 0.6;
 }
 
-/* Custom Scrollbar - minimal */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

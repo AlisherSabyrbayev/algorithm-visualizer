@@ -46,7 +46,6 @@ const Controls = ({
             value={sortingSpeed} 
             onChange={(e) => setSortingSpeed(Number(e.target.value))}
             disabled={isSorting}
-            title="Smaller value means faster sorting"
           />
         </div>
       </div>

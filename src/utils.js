@@ -48,7 +48,6 @@ export const executeAnimations = (animations, speedMs, onFinish) => {
             }
 
             if (i === animations.length - 1) {
-                // Final sorted animation cascade
                 setTimeout(() => {
                     for(let j=0; j<arrayBars.length; j++){
                         const t = setTimeout(() => {
