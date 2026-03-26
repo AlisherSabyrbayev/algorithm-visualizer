@@ -1,16 +1,56 @@
-# React + Vite
+# Algorithm Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive sorting algorithm visualizer built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Random array generation with configurable size
+- Adjustable animation speed
+- Step-by-step visual animations for sorting operations
+- Color states for compare, swap, and sorted results
 
-## React Compiler
+## Implemented Algorithms
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Bubble Sort
+- Merge Sort
+- Quick Sort
+- Insertion Sort
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite 8
+- Plain CSS
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite (usually `http://localhost:5173`).
+
+## Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Controls
+
+- `Generate New Array`: creates a fresh random dataset
+- `Array Size`: changes the number of bars
+- `Speed (ms delay)`: changes the delay between animation steps
+
+## Project Structure
+
+```text
+src/
+  components/
+    Controls.jsx
+    Visualizer.jsx
+  sortingAlgorithms.js
+  utils.js
+```
