@@ -1,31 +1,27 @@
 # Algorithm Visualizer
 
-Небольшой проект на React + Vite для визуализации сортировок.
+A small ReactJs + ViteJs project for visualizing sorting
 
-## Что есть
+## Features
 
-- генерация случайного массива
-- настройка размера массива
-- настройка скорости анимации
+- generating a random array
+- setting the arr size
+- setting the animation speed (ms)
 - Bubble / Merge / Quick / Insertion sort
 
-## Запуск
+## Run
 
-```bash
 npm install
 npm run dev
-```
 
-## Сборка
+## Build
 
-```bash
 npm run build
 npm run preview
-```
 
-## Где что лежит
+## Architecture
 
-- `src/components/Visualizer.jsx` - основная логика визуализатора
-- `src/components/Controls.jsx` - кнопки и слайдеры
-- `src/sortingAlgorithms.js` - алгоритмы и шаги анимации
-- `src/utils.js` - исполнение анимаций
+- `src/components/Visualizer.jsx` - the core logic of the visualizer
+- `src/components/Controls.jsx` - buttons and sliders
+- `src/sortingAlgorithms.js` - animation algorithms and steps
+- `src/utils.js` - animations
