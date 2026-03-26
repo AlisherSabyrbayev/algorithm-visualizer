@@ -1,56 +1,31 @@
 # Algorithm Visualizer
 
-Interactive sorting algorithm visualizer built with React and Vite.
+Небольшой проект на React + Vite для визуализации сортировок.
 
-## Features
+## Что есть
 
-- Random array generation with configurable size
-- Adjustable animation speed
-- Step-by-step visual animations for sorting operations
-- Color states for compare, swap, and sorted results
+- генерация случайного массива
+- настройка размера массива
+- настройка скорости анимации
+- Bubble / Merge / Quick / Insertion sort
 
-## Implemented Algorithms
-
-- Bubble Sort
-- Merge Sort
-- Quick Sort
-- Insertion Sort
-
-## Stack
-
-- React 19
-- Vite 8
-- Plain CSS
-
-## Local Development
+## Запуск
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite (usually `http://localhost:5173`).
-
-## Production Build
+## Сборка
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Controls
+## Где что лежит
 
-- `Generate New Array`: creates a fresh random dataset
-- `Array Size`: changes the number of bars
-- `Speed (ms delay)`: changes the delay between animation steps
-
-## Project Structure
-
-```text
-src/
-  components/
-    Controls.jsx
-    Visualizer.jsx
-  sortingAlgorithms.js
-  utils.js
-```
+- `src/components/Visualizer.jsx` - основная логика визуализатора
+- `src/components/Controls.jsx` - кнопки и слайдеры
+- `src/sortingAlgorithms.js` - алгоритмы и шаги анимации
+- `src/utils.js` - исполнение анимаций
